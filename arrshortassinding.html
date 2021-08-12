@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array sorting</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <input type="button" value="assending" onclick="f1()">
+    <script>
+        function f1()
+        {
+            var arr =[12,10,4,13,15,18,20,32,28,27]; 
+            var len = arr.lenght;
+            var num;
+           
+            for(var i = 0; i<len; i++)
+            {
+                for(var j=i+1; j<len;j++)
+                {
+                    if(arr[i]>arr[j])
+                    {
+                        num = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = num;
+                    }
+                }
+            }
+        }        
+            //array having 10 element
+            document.getElementById("demo1").innerHTML ="orignal array is:"+ arr + "<br>";
+            document.getElementById("demo2").innerHTML = "assinding array is:"+ arr;
+    
+     </script>
+</body>
+</html>
